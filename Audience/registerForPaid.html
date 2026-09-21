@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- meyao -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <!-- font-awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>EventNU</title>
+
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <a href="home.html">EVENT NU</a>
+            </div>
+            <div class="navbar-popup-navbar" id="popupNavbar">
+                <div class="navbar-search-container-popup">
+                    <input type="text" class="form-control" placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน">
+                </div>
+                <button class="navbar-close-popup" id="closePopupNavbar"><i class="bi bi-x"></i></button>
+            </div>
+
+            <div class="navbar-popup-overlay" id="popupOverlay"></div>
+
+            <div class="navbar-popup" id="searchPopup">
+
+                <div class="navbar-popup-header-recommend">
+                    <h3>แนะนำ</h3>
+                </div>
+                <div class="navbar-popup-content">
+                    <div class="navbar-event-list">
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/firststage.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>First Stage</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-search-container">
+                <input type="text" class="form-control navbar-search-bar"
+                    placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน" id="searchInput" readonly>
+
+            </div>
+
+
+            <ul class="navbar-nav navbar-menu-items">
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="home.html" data-target="home">หน้าแรก</a>
+                </li>
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="followrequest.html" data-target="home">จัดอีเว้นท์</a>
+                </li>
+                <li class="navbar-nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" id="eventDropdown">
+                        งานแสดง
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="eventDropdown">
+                        <li><a class="dropdown-item" href="#">งานทั้งหมด</a></li>
+                        <li><a class="dropdown-item" href="#">นันทนาการ</a></li>
+                        <li><a class="dropdown-item" href="#">คอนเสิร์ต</a></li>
+                        <li><a class="dropdown-item" href="#">ละครเวที</a></li>
+                        <li><a class="dropdown-item" href="#">กีฬา</a></li>
+                        <li><a class="dropdown-item" href="#">วัฒนธรรม</a></li>
+                        <li><a class="dropdown-item" href="#">สุขภาพ</a></li>
+                        <li><a class="dropdown-item" href="#">การศึกษา</a></li>
+                        <li><a class="dropdown-item" href="#">ประกวด</a></li>
+                        <li><a class="dropdown-item" href="#">บันเทิง</a></li>
+                        <li><a class="dropdown-item" href="#">ตลาด</a></li>
+                        <li><a class="dropdown-item" href="#">อบรม</a></li>
+                        <li><a class="dropdown-item" href="#">นิทรรศการ</a></li>
+                        <li><a class="dropdown-item" href="#">ครบรอบ</a></li>
+                        <li><a class="dropdown-item" href="#">จิตอาสา</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button class="notification-button" id="notificationButton">
+                    <i class="fi fi-rr-bell"></i>
+                </button>
+                <div class="notification-panel" id="notificationPanel">
+                    <h5>การแจ้งเตือน</h5>
+                    <hr>
+                    <div class="notification-empty">
+                        <i class="bi bi-envelope" style="font-size: 50px; color: #666;"></i>
+                        <p>ไม่มีการแจ้งเตือน</p>
+                        <small>ขณะนี้ยังไม่มีการแจ้งเตือนถึงคุณ</small>
+                    </div>
+                </div>
+                <button class="user-button" id="userButton">
+                    <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                    <span>หนูตาแบ๊ว</span>
+                </button>
+                <button id="hamburgerMenu" class="navbar-toggler">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="user-menu" id="userMenu">
+                    <div class="d-flex align-items-center px-3 py-2">
+                        <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                        <div>
+                            <p class="m-0">หนูตาแบ๊ว<br><small>sugusguss112233@gmail.com</small></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="ticketsoon.html">บัตรของฉัน</a>
+                    <a href="buy.html">คำสั่งซื้อของฉัน</a>
+                    <a href="favorite.html">งานที่ติดตาม</a>
+                    <a href="private.html">ข้อมูลส่วนตัว</a>
+                    <hr>
+                    <a href="#" class="text-danger">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="aRegisterForPaid-container">
+        <div class="aRegisterForPaid-event-container">
+            <div class="aRegisterForPaid-left-side">
+                <div class="aRegisterForPaid-event-card">
+                    <img src="../assets/imgs/openhouse.jpg" alt="Event Image">
+                    <h2>Event : Open House Faculty of Science</h2>
+                </div>
+            </div>
+
+            <div class="aRegisterForPaid-right-side">
+                <div class="aRegisterForPaid-profile-card">
+                    <img src="../assets/imgs/jusmine.png" alt="Profile Image">
+                    <h3>หนูตาแบ๊ว</h3>
+                    <div class="aRegisterForPaid-event">
+                        <div class="aRegisterForPaid-event-details">
+                            <p><i class="aRegisterForPaid-bi bi-person-fill"></i><strong> Name:</strong> หนูตาแบ๊ว
+                            </p>
+                            <p><i class="aRegisterForPaid-bi bi-telephone-fill"></i><strong> Number:
+                                    099-999-9999</strong></p>
+                            <p><i class="aRegisterForPaid-bi bi-envelope-fill"></i><strong> Email:
+                                    หนูตาแบ๊ว@nu.ac.th</strong></p>
+                            <p><i class="aRegisterForPaid-bi bi-credit-card-fill"></i><strong> Student ID:</strong>
+                                99999999</p>
+                            <p><i class="aRegisterForPaid-bi bi-building"></i><strong> Faculty:</strong> Faculty of
+                                Science</p>
+                            <p><i class="aRegisterForPaid-bi bi-bookmark-fill"></i><strong> Major:</strong> Computer
+                                Science</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="aRegisterForPaid-bottom">
+        <div class="aRegisterForPaid-receipt-card">
+            <label class="aRegisterForPaid-label">Number of Tickets</label>
+            <div class="aRegisterForPaid-ticket-controls" id="ticketControls">
+                <button class="aRegisterForPaid-btn" id="decreaseBtn" onclick="decreaseTicket()">-</button>
+                <input type="number" id="amount" class="aRegisterForPaid-inputt" value="0" min="0" max="5" readonly>
+                <button class="aRegisterForPaid-btn" id="increaseBtn" onclick="increaseTicket()">+</button>
+            </div>
+            <p id="totalPrice" class="aRegisterForPaid-price">Total Price : 0 THB</p>
+            <button class="aRegisterForPaid-btn" onclick="confirmTicketAmount()">ยืนยันจำนวนตั๋ว</button>
+            <button class="aRegisterForPaid-btn" onclick="showQRCodePopup()">Generate QR Code</button>
+        </div>
+    
+        <!-- Popup QR Code -->
+        <div id="qrPopup" class="aRegisterForPaid-popup" style="display: none;">
+            <div class="aRegisterForPaid-popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3>Payment QR Code</h3>
+    
+                <div class="aRegisterForPaid-bank-info">
+                    <p><strong>Account Name:</strong> <span id="accountName">Kanokwan Boonyo</span></p>
+                    <p><strong>Payment Method:</strong> <span id="bankName">PromptPay</span></p>
+                </div>
+    
+                <img id="qrCode" src="../assets/imgs/scan.jpg" alt="QR Code">
+                <p>Amount: <span id="popupPrice"></span> Baht</p>
+                <button class="aRegisterForPaid-btn" onclick="payLater()">ชำระภายหลัง</button>
+            </div>
+        </div>
+    
+        <!-- File Upload -->
+        <div class="aRegisterForPaid-upload">
+            <input type="file" id="aRegisterForPaid-file" accept="image/*" onchange="previewFile()">
+            <label for="aRegisterForPaid-file">📂 Attach an Image</label>
+            <img id="aRegisterForPaid-preview" src="" alt="Preview" style="display: none;">
+            <button id="aRegisterForPaid-confirm" onclick="confirmParticipation()" style="display: none;">Confirm Participation</button>
+        </div>
+    </div>
+    
+    <script>
+        const ticketPrice = 100; // ราคาตั๋วต่อใบ
+    
+        function increaseTicket() {
+            let amountInput = document.getElementById("amount");
+            let currentAmount = parseInt(amountInput.value);
+            if (currentAmount < 5) {
+                amountInput.value = currentAmount + 1;
+                updateTotalPrice();
+            }
+        }
+    
+        function decreaseTicket() {
+            let amountInput = document.getElementById("amount");
+            let currentAmount = parseInt(amountInput.value);
+            if (currentAmount > 0) {
+                amountInput.value = currentAmount - 1;
+                updateTotalPrice();
+            }
+        }
+    
+        function updateTotalPrice() {
+            let amount = parseInt(document.getElementById("amount").value);
+            document.getElementById("totalPrice").innerText = `Total Price : ${ticketPrice * amount} THB`;
+        }
+    
+        function confirmTicketAmount() {
+            document.getElementById("decreaseBtn").disabled = true;
+            document.getElementById("increaseBtn").disabled = true;
+            document.getElementById("amount").readOnly = true;
+            document.getElementById("ticketControls").style.display = "none"; // ซ่อนปุ่มเพิ่ม/ลด
+        }
+    
+        function showQRCodePopup() {
+            let popup = document.getElementById("qrPopup");
+            let popupPrice = document.getElementById("popupPrice");
+            let totalPrice = document.getElementById("totalPrice").innerText;
+    
+            popupPrice.innerText = totalPrice.replace("Total Price : ", ""); // อัปเดตราคาใน popup
+            popup.style.display = "block"; // แสดง Popup
+        }
+    
+        function closePopup() {
+            document.getElementById("qrPopup").style.display = "none"; // ปิด Popup
+        }
+    
+        function previewFile() {
+            const file = document.getElementById("aRegisterForPaid-file").files[0];
+            const preview = document.getElementById("aRegisterForPaid-preview");
+            const confirmBtn = document.getElementById("aRegisterForPaid-confirm");
+            const cancelBtn = document.getElementById("aRegisterForPaid-cancel");
+    
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = "block";
+                    confirmBtn.style.display = "inline-block";
+                    cancelBtn.style.display = "inline-block"; 
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    
+        function cancelFile() {
+            document.getElementById("aRegisterForPaid-file").value = ""; 
+            document.getElementById("aRegisterForPaid-preview").style.display = "none";
+            document.getElementById("aRegisterForPaid-confirm").style.display = "none"; 
+            document.getElementById("aRegisterForPaid-cancel").style.display = "none"; 
+        }
+    
+        function confirmParticipation() {
+            alert("คุณได้ยืนยันการเข้าร่วมเรียบร้อยแล้ว!");
+            window.location.href = 'buy.html';
+        }
+
+        // ชำระภายหลัง
+        function payLater() {
+    window.location.href = "buy.html"; 
+}
+    </script>
+    
+        <!-- core  -->
+        <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="../assets/js/navbar.js"></script>
+
+        <!-- bootstrap 3 affix -->
+        <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+        <!-- Meyawo js -->
+        <script src="../assets/js/meyawo.js"></script>
+</body>
+
+</html>

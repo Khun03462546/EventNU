@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- meyao -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <!-- font-awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>EventNU</title>
+
+</head>
+<body class="navbar-body">
+    <nav class="navbar-container">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <a href="home.html">EVENT NU</a>
+            </div>
+            <div class="navbar-popup-navbar" id="popupNavbar">
+                <div class="navbar-search-container-popup">
+                    <input type="text" class="form-control" placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน">
+                </div>
+                <button class="navbar-close-popup" id="closePopupNavbar"><i class="bi bi-x"></i></button>
+            </div>
+
+            <div class="navbar-popup-overlay" id="popupOverlay"></div>
+
+            <div class="navbar-popup" id="searchPopup">
+
+                <div class="navbar-popup-header-recommend">
+                    <h3>Recommended</h3>
+                </div>
+                <div class="navbar-popup-content">
+                    <div class="navbar-event-list">
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> March 8, 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> March 8, 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> February 1, 2025</p>
+                                <h4>Silp Samer</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> Transport 3</p>
+                                <button class="navbar-event-button sold-out">Sold Out</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/firststage.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> February 1, 2025</p>
+                                <h4>First Stage</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> Transport 3</p>
+                                <button class="navbar-event-button sold-out">Sold Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-search-container">
+                <input type="text" class="form-control navbar-search-bar"
+                    placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน" id="searchInput" readonly>
+            </div>
+
+            <ul class="navbar-nav navbar-menu-items">
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="home.html" data-target="home">หน้าแรก</a>
+                </li>
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="assessment.html" data-target="assessment">ประเมินอีเว้นท์</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button class="notification-button" id="notificationButton">
+                    <i class="fi fi-rr-bell"></i>
+                </button>
+                <div class="notification-panel" id="notificationPanel">
+                    <h5>Notifications</h5>
+                    <hr>
+                    <div class="notification-empty">
+                        <i class="bi bi-envelope" style="font-size: 50px; color: #666;"></i>
+                        <p>No Notifications</p>
+                        <small>You currently have no notifications</small>
+                    </div>
+                </div>
+                <button class="user-button" id="userButton">
+                    <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                    <span>หนูตาแบ๊ว</span>
+                </button>
+                <button id="hamburgerMenu" class="navbar-toggler">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="user-menu" id="userMenu">
+                    <div class="d-flex align-items-center px-3 py-2">
+                        <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                        <div>
+                            <p class="m-0">หนูตาแบ๊ว นะคะ<br><small>sugusguss112233@gmail.com</small></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="checkInfo.html">ตรวจสอบเอกสาร</a>
+                    <a href="budget.html">งบประมาณ</a>
+                    <a href="setting.html">ข้อมูลส่วนตัว</a>
+                    <hr>
+                    <a href="#" class="text-danger">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="checkInfo-container">
+        <div class="checkInfo-container-data">
+            <div class="checkInfo-profile">
+                <div class="d-flex align-items-center px-3 py-2"><img src="../assets/imgs/jusmine.png" alt="Profile">
+                </div>
+                <h2>หนูตาแบ๊ว นะคะ</h2>
+                <p>sugusguss112233@gmail.com</p>
+            </div>
+
+            <div class="checkInfo-menu">
+                <a href="checkInfo.html" class="checkInfo-menu-item active"><i class="bi bi-file-earmark-fill"></i>
+                    ตรวจสอบเอกสาร</a>
+                <a href="budget.html" class="checkInfo-menu-item"><i class="bi-file-earmark-pdf"></i>
+                    งบประมาณ</a>
+                <a href="setting.html" class="checkInfo-menu-item "><i class="bi bi-gear"></i>
+                    ข้อมูลส่วนตัว</a>
+                <a href="#" class="checkInfo-menu-item checkInfo-logout"><i class="bi bi-box-arrow-right"></i>
+                    ออกจากระบบ</a>
+            </div>
+        </div>
+        <div class="changeInfo-role-container">
+            <h3 style="text-align: left;">ตรวจสอบเอกสาร</h3>
+            <div class="changeRole-content">
+                <div id="changerole-pending-list">
+                    <div class="changeInfo-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/meyawo.js"></script>
+    <script>
+        const users = [
+            {
+                id: "user1",
+                name: "Jus",
+                role: "Student",
+                email: "jusmine@gmail.com",
+                eventDate: "15 ธ.ค. 2024",
+                eventTime: "12:00",
+                eventLocation: "NU life",
+                eventImage: "../assets/imgs/openhouse.jpg"
+            },
+            {
+                id: "user2",
+                name: "Nina",
+                role: "Volunteer",
+                email: "nina@example.com",
+                eventDate: "16 ธ.ค. 2024",
+                eventTime: "14:00",
+                eventLocation: "Community Hall",
+                eventImage: "../assets/imgs/firststage.jpg"
+            },
+            {
+                id: "user3",
+                name: "Sam",
+                role: "Speaker",
+                email: "sam@example.com",
+                eventDate: "17 ธ.ค. 2024",
+                eventTime: "10:00",
+                eventLocation: "Main Auditorium",
+                eventImage: "../assets/imgs/The Poison Love.jpg"
+            },
+            {
+                id: "user4",
+                name: "Maya",
+                role: "Attendee",
+                email: "maya@example.com",
+                eventDate: "18 ธ.ค. 2024",
+                eventTime: "11:00",
+                eventLocation: "Convention Center",
+                eventImage: "../assets/imgs/identity.jpg"
+            },
+            {
+                id: "user5",
+                name: "Leo",
+                role: "Organizer",
+                email: "leo@example.com",
+                eventDate: "19 ธ.ค. 2024",
+                eventTime: "09:00",
+                eventLocation: "City Park",
+                eventImage: "../assets/imgs/EDUFestival2025.jpg"
+            }
+        ];
+
+        function populatePendingList() {
+            const pendingList = document.getElementById("changerole-pending-list");
+
+            users.forEach(user => {
+                const userDiv = document.createElement("div");
+                userDiv.className = "changeInfo-content";
+
+                userDiv.innerHTML = `
+                    <div class="changeInfo-tab-content changeInfo">
+                        <div class="changeInfo-setting-container-event d-flex align-items-center p-3">
+                            <div class="changeInfo-event-date text-center me-3">
+                                <h3 class="mb-0 fw-bold">${user.eventDate.split(' ')[0]}</h3>
+                                <p class="mb-0">${user.eventDate.split(' ')[1]}</p>
+                                <p class="mb-0">${user.eventTime}</p>
+                            </div>
+                            <div class="changeInfo-event-image">
+                                <img src="${user.eventImage}" alt="Event Image" class="me-3 rounded">
+                            </div>
+                            <div class="changeInfo-event-details">
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <h2>${user.name}</h2>
+                                </div>
+                                <p style="text-align: left;"><i class="bi bi-geo-alt-fill"></i> ${user.eventLocation}</p>
+                                <div class="changeInfo-role-card" id="${user.id}" data-original-role="${user.role}">
+                                    <img src="../assets/imgs/jusmine.png" alt="profile">
+                                    <div class="changerole-role-info">
+                                        <strong>${user.name}</strong><br>
+                                        <span class="changerole-role-text">${user.role}</span>
+                                        <p class="waiting-buyer-email">Email: ${user.email}</p>
+                                    </div>
+                                    <a href="detailsInfo.html"><button class="checkInfo-doc">ตรวจสอบเอกสาร</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                pendingList.appendChild(userDiv);
+            });
+        }
+
+        populatePendingList();
+
+        let selectedUserId = "";
+
+
+
+
+
+    </script>
+</body>
+
+</html>

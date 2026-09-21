@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/themify-icons/css/themify-icons.css"
+    />
+    <!-- meyao -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css" />
+    <!-- font-awesome icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Bootstrap icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Material icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>EventNU</title>
+  </head>
+
+  <body class="navbar-body">
+    <nav class="navbar-container">
+      <div class="navbar-content">
+        <div class="navbar-logo">
+          <a href="home.html">EVENT NU</a>
+        </div>
+        <div class="navbar-search-container">
+          <input
+            type="hidden"
+            class="form-control navbar-search-bar"
+            id="searchInput"
+            readonly
+          />
+        </div>
+        <ul class="navbar-nav navbar-menu-items">
+          <li class="navbar-nav-item">
+            <a class="nav-link" href="home.html" data-target="home">หน้าแรก</a>
+          </li>
+          <li class="navbar-nav-item">
+            <a class="nav-link" href="followrequest.html" data-target="home"
+              >จัดอีเว้นท์</a
+            >
+          </li>
+          <li class="navbar-nav-item dropdown">
+            <button class="nav-link dropdown-toggle" id="eventDropdown">
+              หมวดหมู่
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="eventDropdown">
+              <li><a class="dropdown-item" href="#">อีเว้นท์ทั้งหมด</a></li>
+              <li><a class="dropdown-item" href="#">ละครเวที</a></li>
+              <li><a class="dropdown-item" href="#">งานบุญ</a></li>
+              <li><a class="dropdown-item" href="#">คอนเสิร์ต</a></li>
+              <li><a class="dropdown-item" href="#">ตลาด</a></li>
+              <li><a class="dropdown-item" href="#">กีฬา</a></li>
+              <li><a class="dropdown-item" href="#">การศึกษา</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-right">
+          <button class="notification-button" id="notificationButton">
+            <i class="fi fi-rr-bell"></i>
+          </button>
+          <div class="notification-panel" id="notificationPanel">
+            <h5>การแจ้งเตือน</h5>
+            <hr />
+            <div class="notification-empty">
+              <i
+                class="bi bi-envelope"
+                style="font-size: 50px; color: #666"
+              ></i>
+              <p>ไม่มีการแจ้งเตือน</p>
+              <small>ขณะนี้ยังไม่มีการแจ้งเตือนถึงคุณ</small>
+            </div>
+          </div>
+          <button class="user-button" id="userButton">
+            <img
+              src="../assets/imgs/jusmine.png"
+              alt="Profile"
+              class="profile-img"
+            />
+            <span>หนูตาแบ๊ว</span>
+          </button>
+          <button id="hamburgerMenu" class="navbar-toggler">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div class="user-menu" id="userMenu">
+            <div class="d-flex align-items-center px-3 py-2">
+              <img
+                src="../assets/imgs/jusmine.png"
+                alt="Profile"
+                class="profile-img"
+              />
+              <div>
+                <p class="m-0">
+                  หนูตาแบ๊ว นะคะ<br /><small>sugusguss112233@gmail.com</small>
+                </p>
+              </div>
+            </div>
+            <hr />
+            <a href="ticketsoon.html">บัตรของฉัน</a>
+            <a href="buy.html">คำสั่งซื้อของฉัน</a>
+            <a href="favorite.html">งานที่ติดตาม</a>
+            <a href="private.html">ข้อมูลส่วนตัว</a>
+            <hr />
+            <a href="#" class="text-danger">ออกจากระบบ</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- เนื้อหาหลัก -->
+    <div class="followrequest-container">
+      <div class="followrequest-profile-section">
+        <img
+          src="../assets/imgs/jusmine.png"
+          alt="Profile Picture"
+          class="followrequest-profile-picture"
+        />
+        <div class="followrequest-profile-info">
+          <div class="followrequest-username">หนูตาแบ๊ว นะคะ</div>
+          <div class="followrequest-role">Admine</div>
+        </div>
+      </div>
+
+      <div class="followrequest-action-section">
+        <div class="followrequest-step completed">
+          <div class="followrequest-circle2">
+            <i class="followrequest-bi bi-file-earmark-check"></i>
+          </div>
+          <span>ยื่น</span>
+        </div>
+        <div class="followrequest-line completed"></div>
+        <div class="followrequest-step completed">
+          <div class="followrequest-circle2">
+            <i class="followrequest-bi bi-file-earmark-check"></i>
+          </div>
+          <span>ถึงกรรมการ</span>
+        </div>
+        <div class="followrequest-line completed"></div>
+        <div class="followrequest-step completed">
+          <div class="followrequest-circle2">
+            <i class="followrequest-bi bi-file-earmark-text"></i>
+          </div>
+          <span>คณะบดี</span>
+        </div>
+        <div class="followrequest-line"></div>
+        <div class="followrequest-step">
+          <div class="followrequest-circle3">
+            <i class="followrequest-bi bi-file-earmark-text"></i>
+          </div>
+          <span>อนุมัติ</span>
+        </div>
+      </div>
+      <hr />
+      <div class="followrequest-document-section">
+        <div class="followrequest-left-section">
+          <div class="followrequest-document-card">
+            <div class="followrequest-document-header-left">
+              เอกสารการยื่นขอจัดอีเวนท์
+            </div>
+            <div class="followrequest-document-image-left">
+              <img src="../assets/imgs/docinfo.png" alt="Document Image 1" />
+            </div>
+            <button
+              class="followrequest-document-button"
+              onclick="location.href='request.html'"
+            >
+              เอกสารยื่นขอจัดอีเวนท์
+            </button>
+          </div>
+        </div>
+        <div class="followrequest-right-section">
+          <div class="followrequest-document-card">
+            <div class="followrequest-document-header-right">
+              <div class="followrequest-document-header-left">
+                ตรวจสอบเอกสาร
+              </div>
+            </div>
+            <div class="followrequest-document-image-right">
+              <img src="../assets/imgs/Doc.jpg" alt="Document Image" />
+            </div>
+            <a
+              href="https://drive.google.com/drive/u/1/folders/1BcQNGu9W94JePzQYn8fd3e-bmkBSAYL5"
+              target="_blank"
+            >
+              <button class="followrequest-document-button">ดูเอกสาร</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="followrequest-document-popup"
+      id="documentPopup"
+      onclick="closePopup()"
+    >
+      <div
+        class="followrequest-document-popup-content"
+        onclick="event.stopPropagation()"
+      >
+        <button class="followrequest-close-button" onclick="closePopup()">
+          ×
+        </button>
+        <img id="popupImage" src="" alt="Popup Document Image" />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="../assets/js/meyawo.js"></script>
+    <script src="../assets/js/comment.js"></script>
+  </body>
+</html>

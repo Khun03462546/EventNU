@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- meyao -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <!-- font-awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>EventNU</title>
+
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <a href="home.html">EVENT NU</a>
+            </div>
+            <div class="navbar-popup-navbar" id="popupNavbar">
+                <div class="navbar-search-container-popup">
+                    <input type="text" class="form-control" placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน">
+                </div>
+                <button class="navbar-close-popup" id="closePopupNavbar"><i class="bi bi-x"></i></button>
+            </div>
+
+            <div class="navbar-popup-overlay" id="popupOverlay"></div>
+
+            <div class="navbar-popup" id="searchPopup">
+
+                <div class="navbar-popup-header-recommend">
+                    <h3>แนะนำ</h3>
+                </div>
+                <div class="navbar-popup-content">
+                    <div class="navbar-event-list">
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/firststage.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>First Stage</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-search-container">
+                <input type="text" class="form-control navbar-search-bar"
+                    placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน" id="searchInput" readonly>
+
+            </div>
+
+
+            <ul class="navbar-nav navbar-menu-items">
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="home.html" data-target="home">หน้าแรก</a>
+                </li>
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="followrequest.html" data-target="home">จัดอีเว้นท์</a>
+                </li>
+                <li class="navbar-nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" id="eventDropdown">
+                        หมวดหมู่
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="eventDropdown">
+                        <li><a class="dropdown-item" href="#">อีเว้นท์ทั้งหมด</a></li>
+                        <li><a class="dropdown-item" href="#">ละครเวที</a></li>
+                        <li><a class="dropdown-item" href="#">งานบุญ</a></li>
+                        <li><a class="dropdown-item" href="#">คอนเสิร์ต</a></li>
+                        <li><a class="dropdown-item" href="#">ตลาด</a></li>
+                        <li><a class="dropdown-item" href="#">กีฬา</a></li>
+                        <li><a class="dropdown-item" href="#">การศึกษา</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button class="notification-button" id="notificationButton">
+                    <i class="fi fi-rr-bell"></i>
+                </button>
+                <div class="notification-panel" id="notificationPanel">
+                    <h5>การแจ้งเตือน</h5>
+                    <hr>
+                    <div class="notification-empty">
+                        <i class="bi bi-envelope" style="font-size: 50px; color: #666;"></i>
+                        <p>ไม่มีการแจ้งเตือน</p>
+                        <small>ขณะนี้ยังไม่มีการแจ้งเตือนถึงคุณ</small>
+                    </div>
+                </div>
+                <button class="user-button" id="userButton">
+                    <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                    <span>หนูตาแบ๊ว</span>
+                </button>
+                <button id="hamburgerMenu" class="navbar-toggler">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="user-menu" id="userMenu">
+                    <div class="d-flex align-items-center px-3 py-2">
+                        <img src="../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                        <div>
+                            <p class="m-0">หนูตาแบ๊ว นะคะ<br><small>sugusguss112233@gmail.com</small></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="ticketsoon.html">บัตรของฉัน</a>
+                    <a href="buy.html">คำสั่งซื้อของฉัน</a>
+                    <a href="favorite.html">งานที่ติดตาม</a>
+                    <a href="private.html">ข้อมูลส่วนตัว</a>
+                    <hr>
+                    <a href="#" class="text-danger">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- event -->
+    <div class="adetails">
+        <div class="adetails-top-container">
+            <div class="adetails-top-box">
+                <div class="adetails-top">
+                    <div class="adetails-top-left">
+                        <img src="../assets/imgs/openhouse.jpg" alt="Event Left Image">
+                    </div>
+                    <div class="adetails-top-right">
+                        <h3>Event in NU Presents "Open House 2025"</h3>
+                        <div class="adetails-top-icons">
+                            <i class="fas fa-share-alt" onclick="shareEvent()"></i>
+                            <i class="fas fa-link" onclick="copyLink()"></i>
+                            <i class="far fa-star" id="star-icon" onclick="toggleFavorite()"></i>
+                        </div>
+                        <div class="adetails-top-info">
+                            <div class="adetails-info-item">
+                                <div class="adetails-icon-circle">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <span><strong>Public Sale Date :</strong> 23 January 2025 | 09:00</span>
+                            </div>
+                            <div class="adetails-info-item">
+                                <div class="adetails-icon-circle">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <span><strong>Event Date :</strong> 26 January 2025</span>
+                            </div>
+                            <div class="adetails-info-item">
+                                <div class="adetails-icon-circle">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span><strong>Event Time :</strong> เริ่มงาน 09:00 น. เป็นต้นไป</span>
+                            </div>
+                            <div class="adetails-info-item">
+                                <div class="adetails-icon-circle">
+                                    <i class="fas fa-ticket"></i>
+                                </div>
+                                <span><strong>Prices :</strong> <span id="eventPrice">100</span></span>
+                            </div>
+                            <div class="adetails-info-item">
+                                <div class="adetails-icon-circle">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <span><strong style="color: gray;">Naresuan University (Science Faculty)</strong></span>
+                            </div>
+                            <div class="adetails-mapping">
+                                <p style="color: gray;">Province: Phitsanulok District: Muang</p>
+                                <a href="https://www.google.com/maps/place/..." target="_blank"
+                                    class="adetails-map-link">
+                                    Open Map
+                                </a>
+                            </div>
+                            <div class="adetails-top-right-btn-comingsoon">
+                                <h3>Coming Soon</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="adetails-bottom-container">
+            <div class="adetails-bottom-left">
+                <div class="adetails-bottom-left-about">
+                    <div class="adetails-name-event">
+                        <p>About the Event</p>
+                        <div class="adetails-moodeng">
+                            <p>Categories: <span class="highlight">Education</span></p>
+                        </div>
+                        <h3>Event in Naresuan University Presents "Open House"</h3>
+                        <p>Open House Faculty of Science</p>
+                        <h6>รับชมได้ <span class="highlight">วันที่ 26 มกราคม 2568</span> นี้</h6>
+                        <div class="adetails-textevent">
+                            เตรียมตัวพบกับกิจกรรมที่น่าสนใจจาก 5 ภาควิชา<br>
+                            - กิจกรรมรอบที่ 1: 09.00-10.00 น.<br>
+                            - กิจกรรมรอบที่ 2: 10.30-11.30 น.<br>
+                            ผู้เข้าร่วมจะได้รับเกียรติบัตรจากงาน Open House สามารถนำไปใช้ในการสมัคร TCAS 69 รอบ 1
+                            Portfolio ของคณะวิทยาศาสตร์ มหาวิทยาลัยนเรศวร
+                            (รับตรงงานสัปดาห์วิทยาศาสตร์)
+                        </div>
+                        <div class="adetails-selecteventdata">
+                            <p>Select Event Date:</p>
+                        </div>
+                        <div class="adetails-bottom-mapping">
+                            <i class="fas fa-location-dot"></i>
+                            <p>Province: Phitsanulok District: Muang</p>
+                            <a href="https://www.google.com/maps/place/..." target="_blank"
+                                class="adetails-bottommap-link">
+                            </a>
+                        </div>
+                        <div class="adetails-bottom-box">
+                            <div class="adetails-bottom-box-left">
+                                <span class="datehighlight">26</span> <br> ม.ค. 2568 <br>อาทิตย์ 09:00
+                            </div>
+                            <div class="adetails-bottom-box-right">
+                                Open House <br>Faculty of Science
+                            </div>
+                        </div>
+                        <button id="registerevent" class="adetails-bottom-register-btn"
+                            onclick="openPopup()">Register</button>
+
+                        <div id="ticketPopup" class="adetails-ticket-popup" style="display: none;">
+                            <div class="adetails-ticket-popup-content">
+                                <span class="adetails-close" onclick="closePopup()">&times;</span>
+                                <h2>เลือกบัตร</h2>
+                                <div class="adetails-ticket-option">
+                                    <p>ราคา: <span id="Pricetic">1600</span></p>
+                                </div>
+                                <div class="adetails-ticket-controls">
+                                    <button onclick="updateTicketCount('earlyBird', true)">-</button>
+                                    <span id="earlyBirdCount">0</span>
+                                    <button onclick="updateTicketCount('earlyBird')">+</button>
+                                </div>
+                                <p>รวมราคา : <span id="totalPrice">0.00</span></p>
+                                <button class="adetails-ticket-confirm" onclick="confirmBooking()">จอง</button>
+                            </div>
+                        </div>
+                        <button id="registerevent" class="adetails-bottom-register-btn" style="margin-top: 20px;"
+                            onclick="window.location.href='openlayout.html';">Layout</button>
+                        <div class="adetails-back-link"><a href="javascript:history.back()">
+                                < Back</a>
+                        </div>
+                    </div>
+                    <div class="adetails-review-container">
+                        <div class="adetails-result-star-detail">
+                            <div class="adetails-star-box">
+                                <i class="fas fa-star"></i> 
+                                <span class="adetails-rating-text">คอมเม้นท์ทั้งหมด</span>
+                                <div class="adetails-rating-actions">
+                                    <a href="feedback.html" class="adetails-rating-comment">></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adetails-box-audience-review">
+                            <div class="adetails-user-info">
+                                <img src="../assets/imgs/jusmine.png" alt="User Profile" class="adetails-user-profile">
+                                <span class="adetails-user-name">Username</span>
+                            </div>
+                            <div class="adetails-rating-stars">
+                                <span class="aFeedback-star" onclick="rateComment(1)"><i class="fas fa-star"></i></span>
+                                <span class="aFeedback-star" onclick="rateComment(2)"><i class="fas fa-star"></i></span>
+                                <span class="aFeedback-star" onclick="rateComment(3)"><i class="fas fa-star"></i></span>
+                                <span class="aFeedback-star" onclick="rateComment(4)"><i class="fas fa-star"></i></span>
+                                <span class="aFeedback-star" onclick="rateComment(5)"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="aDetails-user-comment-section">
+                                <textarea id="mainComment" placeholder="แสดงความคิดเห็น..." readonly></textarea>
+                                <a href="feedback.html" id="addCommentLink" class="comment-button">เพิ่มคอมเมนต์</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function shareEvent() {
+                alert("แชร์อีเว้นท์!");
+              }
+              
+              function copyLink() {
+                alert("คัดลอกลิงค์เรียบร้อยแล้ว!");
+              }
+              
+              function toggleFavorite() {
+                const star = document.getElementById("star-icon");
+                if (star.classList.contains("far")) {
+                  star.classList.remove("far");
+                  star.classList.add("fas");
+                  alert("Favoriteแล้ว!");
+                } else {
+                  star.classList.remove("fas");
+                  star.classList.add("far");
+                  alert("ยกเลิกFavoriteแล้ว!");
+                }
+              }
+              
+            let earlyBirdCount = 0;
+
+            function openPopup() {
+                document.getElementById("ticketPopup").style.display = "flex";
+            }
+
+            function closePopup() {
+                document.getElementById("ticketPopup").style.display = "none";
+            }
+
+            function updateTicketCount(type, isSubtract = false) {
+                if (type === 'earlyBird') {
+                    earlyBirdCount = isSubtract ? Math.max(0, earlyBirdCount - 1) : earlyBirdCount + 1;
+                    document.getElementById("earlyBirdCount").innerText = earlyBirdCount;
+                } else if (type === 'regular') {
+                    regularCount = isSubtract ? Math.max(0, regularCount - 1) : regularCount + 1;
+                    document.getElementById("regularCount").innerText = regularCount;
+                }
+                updateTotalPrice();
+            }
+
+            function updateTotalPrice() {
+                const earlyBirdPrice = 1600;
+                const regularPrice = 2000;
+                const total = (earlyBirdCount * earlyBirdPrice) + (regularCount * regularPrice);
+                document.getElementById("totalPrice").innerText = `${total.toFixed(2)}`;
+            }
+
+            function confirmBooking() {
+                alert("✅ การจองสำเร็จ กรุณาจ่ายเงินภายในเวลา 10 นาที");
+                window.location.href = "buy.html"; 
+              }              
+
+            function getRandomComment() {
+                const comments = [
+                    { text: "เหมือนจะดีนะ", rating: 5 },
+                    { text: "น่าสนใจมากๆ เลย", rating: 4 },
+                    { text: "อยากเห็นความคืบหน้าเร็วๆ", rating: 3 },
+                    { text: "แนะนำให้ปรับปรุงส่วนนี้หน่อย", rating: 2 },
+                    { text: "ปรับปรุงมากๆ", rating: 1 }
+                ];
+
+                const randomIndex = Math.floor(Math.random() * comments.length);
+                const comment = comments[randomIndex];
+
+                document.getElementById('mainComment').value = comment.text;
+                currentRating = comment.rating;
+
+                updateStarsDisplay(currentRating);
+            }
+
+            function updateStarsDisplay(rating) {
+                const stars = document.querySelectorAll('.aFeedback-star');
+                stars.forEach((star, index) => {
+                  const icon = star.querySelector('i');
+                  if (icon) {
+                    icon.style.color = index < rating ? 'gold' : 'gray';
+                  }
+                });
+              }              
+
+            // เรียกใช้ฟังก์ชันตอนโหลดหน้าเว็บ เพื่อแสดงคอมเมนต์แบบสุ่มทันที
+            document.addEventListener("DOMContentLoaded", function () {
+                getRandomComment();
+            });
+
+            // เรียกฟังก์ชั่นสุ่มเมื่อโหลดหน้า
+            window.onload = getRandomComment;
+
+            function changeTab(tab) {
+                const tabs = document.querySelectorAll('.aFeedback-navbar span');
+                tabs.forEach(tab => tab.classList.remove('active', 'rating-active', 'comment-active'));
+
+                const activeTab = document.getElementById(tab + 'Tab');
+                activeTab.classList.add('active');
+
+                if (tab === 'rating') {
+                    activeTab.classList.add('rating-active');
+                } else {
+                    activeTab.classList.add('comment-active');
+                }
+
+                const ratingContent = document.getElementById('ratingContent');
+                const commentContent = document.getElementById('commentContent');
+
+                if (tab === 'rating') {
+                    ratingContent.classList.add('active');
+                    commentContent.classList.remove('active');
+
+                    document.getElementById("allContent").style.display = "none";
+                    document.getElementById("starsContent").style.display = "none";
+                    document.getElementById("selectContent").style.display = "none";
+                } else {
+                    ratingContent.classList.remove('active');
+                    commentContent.classList.add('active');
+
+                    document.getElementById("allContent").style.display = "none";
+                    document.getElementById("starsContent").style.display = "none";
+                    document.getElementById("selectContent").style.display = "none";
+                }
+            }
+
+
+            //RATING TYPE
+            document.querySelectorAll('.aFeedback-rating-in-event .rating-option').forEach(option => {
+                option.addEventListener('click', function () {
+                    document.querySelectorAll('.aFeedback-rating-in-event .rating-option').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+
+                    this.classList.add('selected');
+                });
+            });
+
+            //RATING EVENT
+            function showContent(type) {
+                document.getElementById("allContent").style.display = "none";
+                document.getElementById("starsContent").style.display = "none";
+                document.getElementById("selectContent").style.display = "none";
+
+                document.getElementById("option1Content").style.display = "none";
+                document.getElementById("option2Content").style.display = "none";
+                document.getElementById("option3Content").style.display = "none";
+
+                const labels = document.querySelectorAll('.aFeedback-rating-option');
+                labels.forEach(label => {
+                    label.classList.remove('selected-label');
+                });
+
+                if (type === "all") {
+                    document.getElementById("allContent").style.display = "block";
+                    document.querySelector('label[onclick="showContent(\'all\')"]').classList.add('selected-label');
+                } else if (type === "stars") {
+                    document.getElementById("starsContent").style.display = "block";
+                    document.querySelector('label[onclick="showContent(\'stars\')"]').classList.add('selected-label');
+                } else if (type === "select") {
+                    document.getElementById("selectContent").style.display = "block";
+                    document.querySelector('label[onclick="showContent(\'select\')"]').classList.add('selected-label');
+                }
+            }
+
+            function showDropdownContent() {
+                let selection = document.getElementById("dropdownSelection").value;
+
+                document.getElementById("option1Content").style.display = "none";
+                document.getElementById("option2Content").style.display = "none";
+                document.getElementById("option3Content").style.display = "none";
+
+                if (selection === "doption1") {
+                    document.getElementById("option1Content").style.display = "block";
+                } else if (selection === "doption2") {
+                    document.getElementById("option2Content").style.display = "block";
+                } else if (selection === "doption3") {
+                    document.getElementById("option3Content").style.display = "block";
+                }
+
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                showContent('all');
+            });
+
+            //COMMENT ADD
+            let selectedRating = 0;
+
+            function rateActivity(rating) {
+                selectedRating = rating;
+                let stars = document.querySelectorAll('.aFeedback-star');
+                stars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+
+                let ratingMessage = document.getElementById('ratingMessage');
+                if (rating >= 1) {
+                    ratingMessage.style.display = 'block';
+                } else {
+                    ratingMessage.style.display = 'none';
+                }
+            }
+            //ปุ่มส่งกับยกเลิก
+            // ฟังก์ชันที่ใช้เมื่อคลิกปุ่ม "ยกเลิก"
+            function cancelComment() {
+                document.getElementById("dropdown1").value = "";
+                document.getElementById("dropdown2").value = "";
+                document.getElementById("dropdown3").value = "";
+                document.querySelector("textarea").value = "";
+
+                let stars = document.querySelectorAll('.aFeedback-star');
+                stars.forEach(star => {
+                    star.classList.remove('selected');
+                });
+
+                document.getElementById("ratingMessage").style.display = 'none';
+
+                document.getElementById("allContent").style.display = "none";
+                document.getElementById("starsContent").style.display = "none";
+                document.getElementById("selectContent").style.display = "none";
+
+                const labels = document.querySelectorAll('.aFeedback-rating-option');
+                labels.forEach(label => {
+                    label.classList.remove('selected-label');
+                });
+            }
+
+
+            // ฟังก์ชันที่ใช้เมื่อคลิกปุ่ม "ส่ง"
+            function submitComment() {
+                const dropdown1 = document.getElementById("dropdown1").value;
+                const dropdown2 = document.getElementById("dropdown2").value;
+                const dropdown3 = document.getElementById("dropdown3").value;
+                const comment = document.querySelector("textarea").value;
+
+                if (dropdown1 && dropdown2 && dropdown3 && comment) {
+                    alert("ส่งข้อมูลสำเร็จ");
+                    window.location.href = "feedback.html";
+                } else {
+                    alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+                }
+            }
+
+
+        </script>
+        <!-- core  -->
+        <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="../assets/js/navbar.js"></script>
+
+        <!-- bootstrap 3 affix -->
+        <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="../assets/js/meyawo.js"></script>
+
+</body>
+
+</html>

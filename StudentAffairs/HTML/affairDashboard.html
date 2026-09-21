@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- meyao -->
+    <link rel="stylesheet" href="../../assets/css/meyawo.css">
+    <!-- font-awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>EventNU</title>
+
+</head>
+<body class="navbar-body">
+    <nav class="navbar-container">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <a href="../home.html">EVENT NU</a>
+            </div>
+            <div class="navbar-popup-navbar" id="popupNavbar">
+                <div class="navbar-search-container-popup">
+                    <input type="text" class="form-control" placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน">
+                </div>
+                <button class="navbar-close-popup" id="closePopupNavbar"><i class="bi bi-x"></i></button>
+            </div>
+
+            <div class="navbar-popup-overlay" id="popupOverlay"></div>
+
+            <div class="navbar-popup" id="searchPopup">
+
+                <div class="navbar-popup-header-recommend">
+                    <h3>แนะนำ</h3>
+                </div>
+                <div class="navbar-popup-content">
+                    <div class="navbar-event-list">
+                        <div class="navbar-event-card">
+                            <img src="../../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../../assets/imgs/bf.png" alt="Music Festival">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 08 มี.ค. 2025</p>
+                                <h4>NU Book Fair</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> THE PIRATES PARK HATYAI
+                                </p>
+                                <button class="navbar-event-button">ดูรายละเอียด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../../assets/imgs/firststage.jpg" alt="Northern Fest">
+                            <div class="navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>First Stage</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-event-card">
+                            <img src="../../assets/imgs/artyoung.jpg" alt="Northern Fest">
+                            <div class="navbar-navbar-event-info">
+                                <p class="navbar-event-date"><i class="bi bi-calendar"></i> 01 ก.พ. 2025</p>
+                                <h4>ศิลป์เสมอ</h4>
+                                <p class="navbar-event-location"><i class="bi bi-geo-alt"></i> ขนส่ง 3</p>
+                                <button class="navbar-event-button sold-out">บัตรหมด</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-search-container">
+                <input type="text" class="form-control navbar-search-bar"
+                    placeholder="ค้นหางาน, ศิลปิน, จังหวัด หรือสถานที่จัดงาน" id="searchInput" readonly>
+            </div>
+
+
+            <ul class="navbar-nav navbar-menu-items">
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="../home.html" data-target="home">หน้าแรก</a>
+                </li>
+                <li class="navbar-nav-item">
+                    <a class="nav-link" href="../eventAll.html" data-target="home">อนุมัติขอจัดอีเว้นท์</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button class="notification-button" id="notificationButton">
+                    <i class="fi fi-rr-bell"></i>
+                </button>
+                <div class="notification-panel" id="notificationPanel">
+                    <h5>การแจ้งเตือน</h5>
+                    <hr>
+                    <div class="notification-empty">
+                        <i class="bi bi-envelope" style="font-size: 50px; color: #666;"></i>
+                        <p>ไม่มีการแจ้งเตือน</p>
+                        <small>ขณะนี้ยังไม่มีการแจ้งเตือนถึงคุณ</small>
+                    </div>
+                </div>
+                <button class="user-button" id="userButton">
+                    <img src="../../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                    <span>หนูตาแบ๊ว</span>
+                </button>
+                <button id="hamburgerMenu" class="navbar-toggler">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="user-menu" id="userMenu">
+                    <div class="d-flex align-items-center px-3 py-2">
+                        <img src="../../assets/imgs/jusmine.png" alt="Profile" class="profile-img">
+                        <div>
+                            <p class="m-0">หนูตาแบ๊ว นะคะ<br><small>sugusguss112233@gmail.com</small></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="../eventAll.html">อีเว้นท์ทั้งหมด</a>
+                    <a href="../allOrder.html">คำสั่งซื้อทั้งหมด</a>
+                    <a href="followevent.html">ติดตามอีเว้นท์</a>
+                    <a href="setting.html">ข้อมูลส่วนตัว</a>
+                    <hr>
+                    <a href="#" class="text-danger">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <div class="eventDash-container" style="margin-top: 5px;">
+        <h1>ชื่ออีเว้นท์ : <span id="eventTitle">Open House</span></h1>
+        <div class="eventDash-section eventDash-section1">
+            <div class="eventDash-stat-card">
+                <div class="eventDash-icon">
+                    <span>👥</span>
+                </div>
+                <div class="eventDash-stat-info">
+                    <h3>178</h3>
+                    <p>ทั้งหมด</p>
+                </div>
+            </div>
+
+            <div class="eventDash-stat-card">
+                <div class="eventDash-icon">
+                    <span>🎓</span>
+                </div>
+                <div class="eventDash-stat-info">
+                    <h3>120</h3>
+                    <p>นิสิต</p>
+                </div>
+            </div>
+
+            <div class="eventDash-stat-card">
+                <div class="eventDash-icon">
+                    <span>👨‍🏫</span>
+                </div>
+                <div class="eventDash-stat-info">
+                    <h3>40</h3>
+                    <p>อาจารย์</p>
+                </div>
+            </div>
+
+            <div class="eventDash-stat-card">
+                <div class="eventDash-icon">
+                    <span>🏢</span>
+                </div>
+                <div class="eventDash-stat-info">
+                    <h3>18</h3>
+                    <p>บุคคลทั่วไป</p>
+                </div>
+            </div>
+        </div>
+        <div class="eventDash-section eventDash-section2">
+            <div class="eventDash-dashboard">
+                <div class="eventDash-card1">
+                    <h3>จำนวนคณะที่เข้าร่วมมากที่สุด 5 คณะ
+                    </h3>
+                    <div id="eventDash-top5Faculties">
+                    </div>
+                    <canvas id="eventDash-lineChart"></canvas>
+                </div>
+                <div class="eventDash-card2">
+                    <h3>ยอดเงินที่ได้รับ</h3>
+                    <div id="totalAmount"></div>
+                    <canvas id="eventDash-donutChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="eventDash-section eventDash-section3">
+            <h2>รายได้</h2>
+            <div class="eventDash-filter">
+                <label for="role-select">เลือกกลุ่ม:</label>
+                <select id="role-select" onchange="filterByRole()">
+                    <option value="all">ทั้งหมด</option>
+                    <option value="student">นิสิต</option>
+                    <option value="lecturer">อาจารย์</option>
+                    <option value="guest">บุคคลทั่วไป</option>
+                </select>
+            </div>
+
+
+            <div class="eventDash-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>โรล</th>
+                            <th>อีเมลของผู้เข้าชม</th>
+                            <th>ราคาบัตร</th>
+                            <th>จำนวนบัตรที่ซื้อ</th>
+                            <th>ยอดเงินรวม</th>
+                            <th>หลักฐานการโอน</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="student">
+                            <td>นิสิต</td>
+                            <td>Black Sleep Dress</td>
+                            <td>$14</td>
+                            <td>720</td>
+                            <td>153</td>
+                            <td><button class="eventDash-view-slip" data-slid="slip1">จ่ายแล้ว</button></td>
+                        </tr>
+                        <tr class="lecturer">
+                            <td>อาจารย์</td>
+                            <td>Argan Oil</td>
+                            <td>$21</td>
+                            <td>940</td>
+                            <td>225</td>
+                            <td><button class="eventDash-view-slip" data-slid="slip2">จ่ายแล้ว</button></td>
+                        </tr>
+                        <tr class="guest">
+                            <td>บุคคลทั่วไป</td>
+                            <td>EAU DE Parfum</td>
+                            <td>$32</td>
+                            <td>940</td>
+                            <td>280</td>
+                            <td><button class="eventDash-view-slip" data-slid="slip3">จ่ายแล้ว</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Popup สำหรับสลิปโอนเงิน -->
+            <div id="slip1" class="eventDash-payment-popup">
+                <div class="eventDash-popup-content">
+                    <img src="../../assets/imgs/pomtpay/หลักฐาน_198.jpg" alt="Payment Slip">
+                    <button class="eventDash-close-btn">Close</button>
+                </div>
+            </div>
+            <div id="slip2" class="eventDash-payment-popup">
+                <div class="eventDash-popup-content">
+                    <img src="../../assets/imgs/pomtpay/หลักฐาน_198.jpg" alt="Payment Slip">
+                    <button class="eventDash-close-btn">Close</button>
+                </div>
+            </div>
+            <div id="slip3" class="eventDash-payment-popup">
+                <div class="eventDash-popup-content">
+                    <img src="../../assets/imgs/pomtpay/หลักฐาน_198.jpg" alt="Payment Slip">
+                    <button class="eventDash-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="eventDash-affairsdashboard-section3">
+            <h3>ความคิดเห็นจากผู้เข้าร่วม</h3>
+            <label for="filterStars">กรองตามดาว:</label>
+            <select id="filterStars">
+                <option value="all">แสดงทั้งหมด</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <div id="eventDash-commentsContainer"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const comments = [
+                {
+                    username: "John Doe",
+                    profilePic: "../../assets/imgs/jusmine.png",
+                    rating: 5,
+                    options: { "สถานที่เหมาะสม": "มาก", "ความสะอาด": "มาก" },
+                    comment: "✨ สวยเริสค่า ✨"
+                },
+                {
+                    username: "Jane Smith",
+                    profilePic: "../../assets/imgs/jusmine.png",
+                    rating: 4,
+                    options: { "สถานที่เหมาะสม": "มาก", "ความสะอาด": "มาก" },
+                    comment: "งานนี้จัดได้ดีจริง ๆ!"
+                },
+            ];
+
+            function generateStars(starCount) {
+                let starsHTML = "";
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= starCount) {
+                        starsHTML += '<i class="fas fa-star"></i>';
+                    } else {
+                        starsHTML += '<i class="far fa-star"></i>';
+                    }
+                }
+                return starsHTML;
+            }
+
+            function displayComments(filter = "all") {
+                const container = document.getElementById("eventDash-commentsContainer");
+                container.innerHTML = "";
+
+                const filteredComments = (filter === "all")
+                    ? comments
+                    : comments.filter(comment => comment.rating === parseInt(filter));
+
+                if (filteredComments.length === 0) {
+                    container.innerHTML = '<p style="text-align: center; color: #ffa726">ไม่มีคอมเมนต์ที่ตรงกับจำนวนดาวนี้</p>';
+                    return;
+                }
+
+                // วนลูปแสดงคอมเมนต์
+                filteredComments.forEach(comment => {
+                    const commentBox = document.createElement("div");
+                    commentBox.classList.add("aFeedback-comment-box");
+
+                    // ตรวจสอบว่ามี options หรือไม่ แล้วแปลงเป็นข้อความ HTML
+                    const optionsText = comment.options
+                        ? Object.entries(comment.options)
+                            .map(([key, value]) => `${key}: ${value}`)
+                            .join("<br>")
+                        : "";
+
+                    commentBox.innerHTML = `
+                  <img src="${comment.profilePic}" alt="Profile Picture" class="aFeedback-profile-pic">
+                  <div class="aFeedback-comment-content">
+                    <span class="aFeedback-username">${comment.username}</span>
+                    <div class="aFeedback-rating">
+                      ${generateStars(comment.rating)}
+                    </div>
+                    <div class="aFeedback-comment-text-user">
+                      ${optionsText}
+                      <div class="aFeedback-comment-bubble">${comment.comment}</div>
+                    </div>
+                  </div>
+                `;
+
+                    container.appendChild(commentBox);
+                });
+            }
+
+            displayComments();
+
+            document.getElementById("filterStars").addEventListener("change", function () {
+                displayComments(this.value);
+            });
+        });
+
+        function filterByRole() {
+            const selectedRole = document.getElementById('role-select').value;
+            const rows = document.querySelectorAll('table tbody tr');
+
+            rows.forEach(row => {
+                if (selectedRole === 'all') {
+                    row.style.display = '';
+                } else {
+                    if (row.classList.contains(selectedRole)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // เปิด Popup เมื่อคลิกปุ่ม "จ่ายแล้ว"
+        document.querySelectorAll('.eventDash-view-slip').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const slipId = e.target.getAttribute('data-slid');
+                document.getElementById(slipId).style.display = 'flex';
+            });
+        });
+
+        // ปิด Popup เมื่อคลิกปุ่ม Close
+        document.querySelectorAll('.eventDash-close-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.target.closest('.eventDash-payment-popup').style.display = 'none';
+            });
+        });
+
+        const barCtx = document.getElementById('eventDash-lineChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar', // ใช้กราฟแท่ง
+            data: {
+                labels: ['คณะวิศวกรรมศาสตร์', 'คณะศึกษาศาสตร์', 'คณะวิทยาศาสตร์', 'คณะเภสัชศาสตร์', 'คณะบริหารธุรกิจ'], // 5 คณะที่เข้าร่วมมากที่สุด
+                datasets: [{
+                    label: 'จำนวนผู้เข้าร่วม (คน)',
+                    data: [120, 100, 90, 80, 70], // จำนวนคนในแต่ละคณะ
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)', // คณะวิศวกรรมศาสตร์
+                        'rgba(255, 159, 64, 0.6)', // คณะศึกษาศาสตร์
+                        'rgba(54, 162, 235, 0.6)', // คณะวิทยาศาสตร์
+                        'rgba(153, 102, 255, 0.6)', // คณะเภสัชศาสตร์
+                        'rgba(255, 99, 132, 0.6)'  // คณะบริหารธุรกิจ
+                    ], // สีของแท่งตามลำดับคณะ
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)', // คณะวิศวกรรมศาสตร์
+                        'rgba(255, 159, 64, 1)', // คณะศึกษาศาสตร์
+                        'rgba(54, 162, 235, 1)', // คณะวิทยาศาสตร์
+                        'rgba(153, 102, 255, 1)', // คณะเภสัชศาสตร์
+                        'rgba(255, 99, 132, 1)'  // คณะบริหารธุรกิจ
+                    ], // สีของขอบแท่งตามลำดับคณะ
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true }, // แสดง legend
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 10, // เพิ่ม step สำหรับจำนวนคน
+                            callback: function (value) { return value + ' คน'; }
+                        },
+                        title: {
+                            display: true,
+                            text: 'จำนวนคน'
+                        }
+                    }
+                }
+            }
+        });
+
+
+
+        const data = [50000, 30000, 20000]; // ยอดเงินจากแต่ละกลุ่ม
+        const totalAmount = data.reduce((acc, curr) => acc + curr, 0); // คำนวณยอดรวม
+
+        // แสดงยอดเงินทั้งหมดใน div
+        document.getElementById('totalAmount').innerText = `ยอดเงินทั้งหมด: ${totalAmount.toLocaleString()} บาท`;
+
+        const donutCtx = document.getElementById('eventDash-donutChart').getContext('2d');
+        new Chart(donutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['student', 'lecturer', 'guest'],
+                datasets: [{
+                    data: data,
+                    backgroundColor: ['#4A90E2', '#F5C147', '#F57E77'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return `${tooltipItem.label}: ${tooltipItem.raw.toLocaleString()} บาท`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // เปิด Popup เมื่อคลิกปุ่ม "จ่ายแล้ว"
+        document.querySelectorAll('.eventDash-view-slip').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const slipId = e.target.getAttribute('data-slid');
+                document.getElementById(slipId).style.display = 'flex';
+            });
+        });
+
+        // ปิด Popup เมื่อคลิกปุ่ม Close
+        document.querySelectorAll('.eventDash-close-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.target.closest('.eventDash-payment-popup').style.display = 'none';
+            });
+        });
+    </script>
+    <script src="../../assets/js/navbar.js"></script>
+</body>
+
+</html>
